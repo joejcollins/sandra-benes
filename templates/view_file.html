@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}View {{ file_info.name }} - Sandra Benes{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <h1 class="h2 mb-4">
+            <i data-feather="file-text" class="me-2"></i>
+            {{ file_info.name }}
+        </h1>
+    </div>
+    <div class="col-lg-4 text-lg-end">
+        <div class="btn-group" role="group">
+            <a href="{{ url_for('edit_file', filename=file_info.name) }}" class="btn btn-primary">
+                <i data-feather="edit" class="me-2"></i>
+                Edit
+            </a>
+            <a href="{{ url_for('download_file', filename=file_info.name) }}" class="btn btn-outline-info">
+                <i data-feather="download" class="me-2"></i>
+                Download
+            </a>
+            <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+                <i data-feather="arrow-left" class="me-2"></i>
+                Back
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- File Info -->
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-3">
+                <strong>File Type:</strong>
+                <span class="badge bg-{{ 'success' if file_info.type == 'csv' else 'info' if file_info.type == 'json' else 'secondary' }} ms-2">
+                    {{ file_info.type.upper() }}
+                </span>
+            </div>
+            <div class="col-md-3">
+                <strong>Size:</strong> {{ "%.1f KB"|format(file_info.size / 1024) }}
+            </div>
+            <div class="col-md-6">
+                <strong>Last Modified:</strong> {{ moment(file_info.modified).format('YYYY-MM-DD HH:mm:ss') if moment else file_info.modified }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- File Content -->
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i data-feather="eye" class="me-2"></i>
+            File Contents
+        </h5>
+    </div>
+    <div class="card-body">
+        {% if content.type == 'csv' %}
+            <!-- CSV Table View -->
+            <div class="table-responsive">
+                <table class="table table-sm table-bordered">
+                    {% if content.headers %}
+                    <thead class="table-dark">
+                        <tr>
+                            {% for header in content.headers %}
+                            <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    {% endif %}
+                    <tbody>
+                        {% for row in content.rows %}
+                        <tr>
+                            {% for cell in row %}
+                            <td>{{ cell }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+            {% if content.rows|length > 20 %}
+            <div class="alert alert-info mt-3">
+                <i data-feather="info" class="me-2"></i>
+                Showing {{ content.rows|length }} rows. Large datasets may be truncated for performance.
+            </div>
+            {% endif %}
+            
+        {% elif content.type == 'json' %}
+            <!-- JSON Pretty Print -->
+            <pre class="json-viewer"><code>{{ content.formatted }}</code></pre>
+            
+        {% else %}
+            <!-- Plain Text -->
+            <pre class="text-viewer"><code>{{ content }}</code></pre>
+        {% endif %}
+    </div>
+</div>
+
+{% if content.type == 'csv' and content.raw %}
+<!-- Raw Content Toggle -->
+<div class="card mt-3">
+    <div class="card-header">
+        <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#rawContent">
+            <i data-feather="code" class="me-2"></i>
+            View Raw CSV
+        </button>
+    </div>
+    <div class="collapse" id="rawContent">
+        <div class="card-body">
+            <pre class="text-viewer"><code>{{ content.raw }}</code></pre>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
