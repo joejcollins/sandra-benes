@@ -13,7 +13,7 @@ rule_settings:
     - refactoring
     - suggestion
     - comment
-  python_version: "3.12"
+  python_version: "3.13"
 clone_detection:
   min_lines: 3
   min_duplicates: 2
