@@ -7,5 +7,5 @@ from fastapi import FastAPI
 
 from sandra_benes.api import v1
 
-app = FastAPI(title="MyApp API")
+app = FastAPI(title="Sandra Benes API")
 app.include_router(v1.router, prefix="/api/v1")

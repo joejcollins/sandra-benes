@@ -21,10 +21,6 @@ lint:  # Lint the code with ruff.
 lock:  # Update the lock file from pyproject.toml.
 	uv lock
 
-.PHONY: notebooks
-notebooks:  # Run Marimo notebooks.
-	.venv/bin/marimo run notebooks/
-
 report:  # Report the python version and pip list.
 	.venv/bin/python --version
 	uv pip list -v
