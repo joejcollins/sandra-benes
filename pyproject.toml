@@ -1,13 +1,57 @@
 [project]
-name = "repl-nix-workspace"
-version = "0.1.0"
-description = "Add your description here"
-requires-python = ">=3.11"
-dependencies = [
-    "email-validator>=2.2.0",
-    "flask>=3.1.1",
-    "flask-sqlalchemy>=3.1.1",
-    "gunicorn>=23.0.0",
-    "psycopg2-binary>=2.9.10",
-    "werkzeug>=3.1.3",
+name = "sandra_benes"
+version = "0.0.1"
+description = "Pilot of the swing-wing rocket-plane Thunderbird 1."
+authors = [ { name = "Joe J Collins", email = "joejcollins@gmail.com" },]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
 ]
+requires-python = ">=3.12"
+dependencies = [
+    "debugpy",
+    "fastapi",
+    "ipykernel",
+    "ipympl",
+    "loguru",
+    "mkdocs",
+    "pre-commit",
+    "pytest-cov",
+    "pytest",
+    "python-dotenv",
+    "ruff",
+    "sourcery",
+    "tqdm",
+    "types-tqdm",
+    "uvicorn",
+]
+
+[project.urls]
+repository = "https://github.com/joejcollins/sandra-benes"
+
+[tool.pytest.ini_options]
+log_cli = false
+addopts = "-q --disable-warnings --cache-clear"
+testpaths = ["./tests"]
+
+[tool.ruff]
+lint.select = ["F", "E", "W", "C90", "I", "PL", "D"]
+lint.ignore = ["D203", "D213"]
+lint.fixable = ["ALL"]
+line-length = 80
+
+[tool.uv]
+package = true
+
+[[tool.mypy.overrides]]
+module = ["sandra_benes.*"]
+follow_untyped_imports = true
+
+[tool.pyright]
+exclude = ["**/__pycache__"]
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "3.12"
+pythonPlatform = "Linux"

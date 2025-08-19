@@ -1,0 +1,27 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "words": [
+        "abcdefghijklmnopqrstuvwxyz",
+        "addopts",
+        "debugpy",
+        "dotenv",
+        "fastapi",
+        "ipykernel",
+        "ipympl",
+        "loguru",
+        "marimo",
+        "mkdocs",
+        "mypy",
+        "pycache",
+        "pyproject",
+        "pyright",
+        "pytest",
+        "sandra_benes",
+        "sourcery",
+        "testpaths",
+        "tqdm",
+        "uvicorn",
+        "venv"
+    ]
+}
