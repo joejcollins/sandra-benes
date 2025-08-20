@@ -10,6 +10,7 @@
         "fastapi",
         "fastmcp",
         "gunicorn",
+        "healthz",
         "instrumentator",
         "ipykernel",
         "ipympl",

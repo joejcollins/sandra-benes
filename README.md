@@ -2,7 +2,9 @@
 
 RAG and MCP demo
 
-API at https://sandra-benes.onrender.com
+API at https://sandra-benes-api.onrender.com
+Start command `gunicorn -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT sandra_benes.fastapi:APP`
+MCP at 
 
 ## To Do
 
@@ -11,3 +13,4 @@ API at https://sandra-benes.onrender.com
 - [x] MCP ping endpoint
 - [ ] Prometheus endpoint
 - [ ] logging
+- [ ] /healthz endpoint for render.com
