@@ -2,10 +2,10 @@
 
 from fastapi import APIRouter
 
-router = APIRouter()
+ROUTER = APIRouter()
 
 
-@router.get("/ping")
-async def ping():
+@ROUTER.get("/ping")
+async def ping() -> dict:
     """Health check endpoint."""
     return {"message": "pong"}

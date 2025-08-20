@@ -17,6 +17,7 @@ dependencies = [
     "ipykernel",
     "ipympl",
     "loguru",
+    "mcp[cli]",
     "mkdocs",
     "pre-commit",
     "pytest-cov",
@@ -27,7 +28,7 @@ dependencies = [
     "tqdm",
     "types-tqdm",
     "uvicorn",
-]
+    ]
 
 [project.urls]
 repository = "https://github.com/joejcollins/sandra-benes"

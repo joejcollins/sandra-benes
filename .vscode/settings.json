@@ -26,4 +26,11 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
   },
+  "chat.mcp.serverSampling": {
+    "sandra-benes/.vscode/mcp.json: sandra-benes-mcp": {
+      "allowedModels": [
+        "copilot/gpt-4.1"
+      ]
+    }
+  },
 }

@@ -1,6 +1,9 @@
 # Consistent set of make tasks.
 .DEFAULT_GOAL:=help  # because it's is a safe task.
 
+api:  # Run the FastAPI app with uvicorn.
+	.venv/bin/uvicorn sandra_benes.fastapi:API --reload
+
 clean: # Remove the environment.
 	rm -rf .venv
 	rm -rf *.egg-info
@@ -25,8 +28,8 @@ report:  # Report the python version and pip list.
 	.venv/bin/python --version
 	uv pip list -v
 
-run:  # Run the FastAPI app with uvicorn.
-	.venv/bin/uvicorn sandra_benes.app:app --reload
+mcp:  # Run the MCP server.
+	.venv/bin/mcp dev src/sandra_benes/fastmcp.py:MCP
 
 test:  # Run tests.
 	.venv/bin/pytest ./tests --verbose --color=yes
