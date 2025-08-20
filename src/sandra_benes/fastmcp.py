@@ -4,10 +4,12 @@ from typing import Any
 
 from mcp.server.fastmcp import FastMCP
 
-MCP = FastMCP("my-service")
+from sandra_benes.handlers import pong
+
+MCP = FastMCP("Sandra Benes MCP Server")
 
 
-@MCP.tool("health")
-def health_check() -> dict[str, Any]:
-    """Do the health check."""
-    return {"status": "healthy"}
+@MCP.tool("ping")
+def ping() -> dict[str, Any]:
+    """Do a health check."""
+    return pong.get_pong()

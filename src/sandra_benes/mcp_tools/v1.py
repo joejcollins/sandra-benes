@@ -13,7 +13,7 @@ async def mcp_discovery() -> JSONResponse:
     return JSONResponse(
         content={
             "name": "Sandra Benes API",
-            "description": "API for health checks and more, discoverable via MCP.",
+            "description": "API for health checks discoverable via MCP.",
             "endpoints": [
                 {
                     "name": "Health Check",

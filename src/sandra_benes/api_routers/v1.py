@@ -2,10 +2,12 @@
 
 from fastapi import APIRouter
 
+from sandra_benes.handlers import pong
+
 ROUTER = APIRouter()
 
 
 @ROUTER.get("/ping")
 async def ping() -> dict:
     """Health check endpoint."""
-    return {"message": "pong"}
+    return pong.get_pong()

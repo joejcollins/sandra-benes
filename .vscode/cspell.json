@@ -4,11 +4,13 @@
     "words": [
         "abcdefghijklmnopqrstuvwxyz",
         "addopts",
+        "asyncio",
         "debugpy",
         "dotenv",
         "fastapi",
         "fastmcp",
         "gunicorn",
+        "instrumentator",
         "ipykernel",
         "ipympl",
         "loguru",
@@ -24,6 +26,7 @@
         "testpaths",
         "tqdm",
         "uvicorn",
+        "Vasili",
         "venv"
     ]
 }
