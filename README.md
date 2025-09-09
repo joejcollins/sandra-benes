@@ -1,10 +1,8 @@
-# sandra_benes
+# RAG and MCP demo
 
-RAG and MCP demo
+Running at <https://sandra-benes.onrender.com>.
 
-API at https://sandra-benes-api.onrender.com
 Start command `gunicorn -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT sandra_benes.fastapi:APP`
-MCP at 
 
 ## To Do
 

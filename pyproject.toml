@@ -15,6 +15,7 @@ dependencies = [
     "gunicorn",
     "fastapi",
     "fastmcp",
+    "lancedb",
     "ipykernel",
     "ipympl",
     "loguru",

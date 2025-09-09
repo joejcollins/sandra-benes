@@ -33,6 +33,6 @@ test:  # Run tests.
 	.venv/bin/pytest --cov=src
 
 venv:  # Create the virtual environment.
-	uv venv .venv
+	uv venv .venv --clear
 	uv sync --frozen
 
