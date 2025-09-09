@@ -12,10 +12,12 @@ nav:
   - Getting Started: getting_started.md
 
 plugins:
-    - search
-    - mermaid2
+  - search
+  - mermaid2:
+      javascript: https://unpkg.com/mermaid/dist/mermaid.min.js
+      arguments:
+        startOnLoad: true
 
 extra_javascript:
-    - https://polyfill.io/v3/polyfill.min.js?features=es6
-    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
