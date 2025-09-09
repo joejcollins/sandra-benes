@@ -8,10 +8,7 @@ clean: # Remove the environment.
 	find . -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete
 
 .PHONY: docs
-docs: # Build the documentation.
-	mkdocs build
-
-docs-serve: # Serve the documentation.
+docs: # Serve the documentation.
 	mkdocs serve
 
 .PHONY: help
@@ -23,6 +20,9 @@ lint:  # Lint the code with ruff.
 
 lock:  # Update the lock file from pyproject.toml.
 	uv lock
+
+publish: # Publish the documentation.
+	mkdocs gh-deploy --force
 
 report:  # Report the python version and pip list.
 	.venv/bin/python --version
