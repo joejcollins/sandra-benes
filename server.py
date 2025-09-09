@@ -1,12 +1,16 @@
 """Starting point for the application."""
 
-import os
+import logging
 
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
 from sandra_benes.fastapi import API
 from sandra_benes.fastmcp import MCP
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 SERVER: FastAPI = API
 
