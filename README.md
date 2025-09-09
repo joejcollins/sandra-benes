@@ -2,6 +2,8 @@
 
 Running at <https://sandra-benes.onrender.com>.
 
+Docs at <https://joejcollins.github.io/sandra-benes/>.
+
 Start command `gunicorn -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT sandra_benes.fastapi:APP`
 
 ## To Do
