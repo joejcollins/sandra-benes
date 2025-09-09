@@ -21,6 +21,7 @@ dependencies = [
     "loguru",
     "mcp[cli]",
     "mkdocs",
+    "mkdocs-mermaid2-plugin",
     "pre-commit",
     "prometheus-client",
     "pytest-cov",

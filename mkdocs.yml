@@ -1,4 +1,21 @@
 site_name: sandra_benes
-# 
-site_author: Earth Rover Program
-# 
+repo_url: https://github.com/joejcollins/sandra-benes
+site_author: Joe J Collins
+theme:
+  name: readthedocs
+  palette:
+      - scheme: default
+        primary: indigo
+        accent: indigo
+nav:
+  - Home: index.md
+  - Getting Started: getting_started.md
+
+plugins:
+    - search
+    - mermaid2
+
+extra_javascript:
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    - https://unpkg.com/mermaid/dist/mermaid.min.js

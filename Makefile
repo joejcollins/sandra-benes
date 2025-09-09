@@ -8,7 +8,10 @@ clean: # Remove the environment.
 	find . -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete
 
 .PHONY: docs
-docs: # Serve the documentation.
+docs: # Build the documentation.
+	mkdocs build
+
+docs-serve: # Serve the documentation.
 	mkdocs serve
 
 .PHONY: help
@@ -35,4 +38,3 @@ test:  # Run tests.
 venv:  # Create the virtual environment.
 	uv venv .venv --clear
 	uv sync --frozen
-
