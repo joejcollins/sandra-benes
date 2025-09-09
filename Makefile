@@ -22,7 +22,7 @@ lock:  # Update the lock file from pyproject.toml.
 	uv lock
 
 publish: # Publish the documentation.
-	.venv/bin/mkdocs gh-deploy --force
+	.venv/bin/mkdocs gh-deploy --force --verbose
 
 report:  # Report the python version and pip list.
 	.venv/bin/python --version
