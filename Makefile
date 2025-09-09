@@ -9,7 +9,7 @@ clean: # Remove the environment.
 
 .PHONY: docs
 docs: # Serve the documentation.
-	mkdocs serve
+	.venv/bin/mkdocs serve
 
 .PHONY: help
 help: # Show help for each of the makefile recipes.
@@ -22,7 +22,7 @@ lock:  # Update the lock file from pyproject.toml.
 	uv lock
 
 publish: # Publish the documentation.
-	mkdocs gh-deploy --force
+	.venv/bin/mkdocs gh-deploy --force
 
 report:  # Report the python version and pip list.
 	.venv/bin/python --version
