@@ -15,18 +15,14 @@ repos:
 
 
   # formatters
-
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.3.4
+    rev: v0.12.12
     hooks:
       # Run the linter.
       - id: ruff
         types_or: [ python, pyi, jupyter ]
         args: [ --fix ]
-        pass_filenames: false
-      # Run the formatter.
-      - id: ruff-format
 
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.26.3
@@ -46,9 +42,9 @@ repos:
       - id: check-json
       - id: check-yaml
       - id: end-of-file-fixer
-        exclude_types: [jupyter, markdown]
+        exclude_types: [jupyter]
       - id: trailing-whitespace
-        exclude_types: [jupyter, markdown]
+        exclude_types: [jupyter]
       - id: check-ast
       - id: check-builtin-literals
       - id: detect-private-key
@@ -79,4 +75,3 @@ repos:
       - id: pydocstyle
         args: [ "--convention=google", "--add-ignore=D10,D21" ]
         additional_dependencies: [ "tomli" ]
-        

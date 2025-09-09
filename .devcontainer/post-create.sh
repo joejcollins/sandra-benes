@@ -1,5 +1,8 @@
-# Create the virtual environment.
+#!/bin/sh
+
+# This script is run after the container is created.
+make clean
 make venv
 
-# Run pre-commit
-.venv/bin/pre-commit run
+# Install pre-commit hooks
+.venv/bin/pre-commit install
