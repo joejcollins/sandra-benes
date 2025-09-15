@@ -1,8 +1,8 @@
 {
-	"name": "sandra-benes: Python Template",
-	"image": "ghcr.io/joejcollins/sandra-benes:latest",
-	"features": {
-	},
+	"name": "sandra-benes: RAG Search",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -18,5 +18,9 @@
 			]
 		}
 	},
+	"forwardPorts": [
+		9200,
+		9300
+	],
 	"postCreateCommand": ". ./.devcontainer/post-create.sh | tee /tmp/post-create-log.txt"
 }

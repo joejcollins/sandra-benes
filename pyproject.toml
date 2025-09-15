@@ -12,6 +12,7 @@ classifiers = [
 requires-python = ">=3.13"
 dependencies = [
     "debugpy",
+    "elasticsearch",
     "gunicorn",
     "fastapi",
     "fastmcp",

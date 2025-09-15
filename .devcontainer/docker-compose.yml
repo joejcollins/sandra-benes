@@ -1,0 +1,31 @@
+services:
+  app:
+    image: ghcr.io/joejcollins/sandra-benes:latest
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
+    depends_on:
+      - elasticsearch
+    networks:
+      - dev-network
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:9.1.1
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+    networks:
+      - dev-network
+    restart: unless-stopped
+
+volumes:
+  es-data:
+
+networks:
+  dev-network:
