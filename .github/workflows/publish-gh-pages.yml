@@ -4,18 +4,19 @@ on:
   push:
     branches: [ main ]
     paths:
+      - .github/workflows/publish-gh-pages.yml
       - docs/**
       - mkdocs.yml
 
 permissions:
   contents: write
+  packages: read
 
 jobs:
   publish-pages:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/joejcollins/sandra-benes:latest
-      options: --user root # needs to be root or the checkout fails.
 
     steps:
       - uses: actions/checkout@v4
