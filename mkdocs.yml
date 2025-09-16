@@ -7,6 +7,8 @@ theme:
 nav:
   - Home: index.md
   - Getting Started: getting_started.md
+  - API:
+    - Helpers: api/helpers.md
 
 plugins:
   - search
@@ -14,6 +16,12 @@ plugins:
       javascript: https://unpkg.com/mermaid/dist/mermaid.min.js
       arguments:
         startOnLoad: true
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: false
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6

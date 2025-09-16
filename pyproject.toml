@@ -24,6 +24,7 @@ dependencies = [
     "mcp[cli]",
     "mkdocs",
     "mkdocs-mermaid2-plugin",
+    "mkdocstrings[python]",
     "pre-commit",
     "prometheus-client",
     "pytest-cov",
