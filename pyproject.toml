@@ -2,7 +2,7 @@
 name = "sandra_benes"
 version = "0.0.1"
 description = "Pilot of the swing-wing rocket-plane Thunderbird 1."
-authors = [ { name = "Joe J Collins", email = "joejcollins@gmail.com" },]
+authors = [{ name = "Joe J Collins", email = "joejcollins@gmail.com" }]
 license = { file = "LICENSE" }
 readme = "README.md"
 classifiers = [
@@ -36,7 +36,7 @@ dependencies = [
     "tqdm",
     "types-tqdm",
     "uvicorn",
-    ]
+]
 
 [project.urls]
 repository = "https://github.com/joejcollins/sandra-benes"
@@ -60,8 +60,19 @@ module = ["sandra_benes.*"]
 follow_untyped_imports = true
 
 [tool.pyright]
-exclude = ["**/__pycache__"]
+exclude = [
+    "**/__pycache__",
+    "**/*.aux",
+    "**/*.nav",
+    ".mypy_cache",
+    "**/.pytest_cache",
+    "**/.ruff_cache",
+    "**/*.egg-info",
+    "**/*.pyc",
+]
+include = ["src", "tests"]
+pythonVersion = "3.13"
+pythonPlatform = "Linux"
 reportMissingImports = true
 reportMissingTypeStubs = false
-pythonVersion = "3.12"
-pythonPlatform = "Linux"
+venv = ".venv"

@@ -10,12 +10,7 @@
     "**/.pytest_cache": true,
     "**/.ruff_cache": true,
     "**/*.egg-info": true,
-    "**/*.pyc": true,
-    "**/*.out": true,
-    "**/*.synctex.gz": true,
-    "**/*.snm": true,
-    "**/*.fls": true,
-    "**/*.fdb_latexmk": true
+    "**/*.pyc": true
   },
   "files.exclude": {
     "**/__pycache__": true,
@@ -25,12 +20,7 @@
     "**/.pytest_cache": true,
     "**/.ruff_cache": true,
     "**/*.egg-info": true,
-    "**/*.pyc": true,
-    "**/*.out": true,
-    "**/*.synctex.gz": true,
-    "**/*.snm": true,
-    "**/*.fls": true,
-    "**/*.fdb_latexmk": true
+    "**/*.pyc": true
   },
   "python.languageServer": "Pylance",
   "python.defaultInterpreterPath": ".venv/bin/python",
