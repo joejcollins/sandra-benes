@@ -75,4 +75,7 @@ pythonVersion = "3.13"
 pythonPlatform = "Linux"
 reportMissingImports = true
 reportMissingTypeStubs = false
+reportUnusedImport = true
+reportUnusedVariable = true
+reportPrivateUsage = true
 venv = ".venv"
