@@ -7,6 +7,7 @@
         "asyncio",
         "debugpy",
         "dotenv",
+        "Embedder",
         "fastapi",
         "fastmcp",
         "gunicorn",
