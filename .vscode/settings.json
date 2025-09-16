@@ -32,21 +32,6 @@
     "**/*.fls": true,
     "**/*.fdb_latexmk": true
   },
-  "search.exclude": {
-    "**/__pycache__": true,
-    "**/*.aux": true,
-    "**/*.nav": true,
-    ".mypy_cache": true,
-    "**/.pytest_cache": true,
-    "**/.ruff_cache": true,
-    "**/*.egg-info": true,
-    "**/*.pyc": true,
-    "**/*.out": true,
-    "**/*.synctex.gz": true,
-    "**/*.snm": true,
-    "**/*.fls": true,
-    "**/*.fdb_latexmk": true
-  },
   "python.languageServer": "Pylance",
   "python.defaultInterpreterPath": ".venv/bin/python",
   "python.testing.autoTestDiscoverOnSaveEnabled": true,
