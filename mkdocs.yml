@@ -3,10 +3,7 @@ repo_url: https://github.com/joejcollins/sandra-benes
 site_author: Joe J Collins
 theme:
   name: readthedocs
-  palette:
-      - scheme: default
-        primary: indigo
-        accent: indigo
+
 nav:
   - Home: index.md
   - Getting Started: getting_started.md
