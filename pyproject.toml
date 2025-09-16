@@ -17,6 +17,7 @@ dependencies = [
     "fastapi",
     "fastmcp",
     "lancedb",
+    "langchain",
     "ipykernel",
     "ipympl",
     "loguru",
