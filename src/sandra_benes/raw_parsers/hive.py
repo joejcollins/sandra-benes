@@ -1,9 +1,11 @@
-"""Hive parser for raw hive files."""
+"""Hive parser/normalizer for the raw hive files."""
 
 # class Extractor:
 #     def fetch(self, source) -> RawPage: ...
 
 # class Normalizer:
+#     """Transform raw hive files into normalized documents."""
+
 #     def transform(self, raw: RawPage) -> NormalizedDoc: ...
 
 # class Segmenter:

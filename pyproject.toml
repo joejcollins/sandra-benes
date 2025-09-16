@@ -1,7 +1,7 @@
 [project]
 name = "sandra_benes"
 version = "0.0.1"
-description = "Pilot of the swing-wing rocket-plane Thunderbird 1."
+description = "Coordinator of Data Section since March 4, 1999 (1st tour)."
 authors = [{ name = "Joe J Collins", email = "joejcollins@gmail.com" }]
 license = { file = "LICENSE" }
 readme = "README.md"
@@ -28,6 +28,7 @@ dependencies = [
     "polars",
     "pre-commit",
     "prometheus-client",
+    "pydantic",
     "pytest-cov",
     "pytest",
     "pytest-asyncio",
