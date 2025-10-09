@@ -1,19 +1,14 @@
 site_name: sandra_benes
 repo_url: https://github.com/joejcollins/sandra-benes
 site_author: Joe J Collins
+use_directory_urls: false
 theme:
   name: readthedocs
-
-nav:
-  - Home: index.md
-  - Getting Started: getting_started.md
-  - API:
-    - Helpers: api/helpers.md
 
 plugins:
   - search
   - mermaid2:
-      javascript: https://unpkg.com/mermaid/dist/mermaid.min.js
+      javascript: https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
       arguments:
         startOnLoad: true
   - mkdocstrings:
